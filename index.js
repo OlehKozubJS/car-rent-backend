@@ -6,4 +6,4 @@ const { admins, clients } = users;
 
 console.log(admins);
 console.log(clients);
-console.table();
+console.table(users);
