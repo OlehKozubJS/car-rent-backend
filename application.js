@@ -1,4 +1,4 @@
-console.log("Welcome to Node.js, folks");
+console.log("Welcome to Node.js, folks!");
 
 const users = require("./users");
 
