@@ -1,6 +1,6 @@
-const admins = ["Alex", "Andrii", "Vasyl"];
+const admins = { a: ["Alex", "Andrii"], v: ["Vasyl"] };
 
-const clients = ["Anna", "Alina", "Tamara"];
+const clients = { a: ["Anna", "Alina"], t: ["Tamara"] };
 
 const users = {
   admins,
