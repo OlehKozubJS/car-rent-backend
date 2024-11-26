@@ -1,6 +1,9 @@
 console.log("Welcome to Node.js, comrades");
 
-const { admins, clients } = require("./users");
+const users = require("./users");
+
+const { admins, clients } = users;
 
 console.log(admins);
 console.log(clients);
+console.table();
