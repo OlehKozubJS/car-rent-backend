@@ -15,8 +15,9 @@ const getText = async () => {
 const addText = async () => {
   try {
     const oldData = await readFile("./users.json", "utf-8");
-    const newData = await oldData.clients;
-    console.log(newData);
+    const newData = await JSON.parse(oldData);
+    const newDataClients = await newData.clients;
+    console.log(newDataClients);
     //await writeFile("./users.json", JSON.stringify(newData));
   } catch (error) {
     console.log(error.message);
