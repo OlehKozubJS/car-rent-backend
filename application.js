@@ -5,7 +5,7 @@ const { writeFile, readFile } = require("fs/promises");
 
 const fileOperation = async () => {
   try {
-    const data = await readFile("./users.json", "utf-8");
+    const data = await readFile("./user.json", "utf-8");
     console.log(data);
   } catch (error) {
     console.log(error.message);
