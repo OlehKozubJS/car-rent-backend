@@ -12,13 +12,13 @@ const getText = async () => {
   }
 };
 
-const addText = async () => {
+const addText = async (newData) => {
   try {
     const oldTextJSON = await readFile("./users.json", "utf-8");
     const oldTextObject = await JSON.parse(oldTextJSON);
-    const newTextObject = {
+    const newTextObject = await {
       ...oldTextObject,
-      developers: ["Oleh", "Zemfira", "Vitalii"],
+      ...newData,
     };
     console.log(newTextObject);
     const newTextJSON = JSON.stringify(newTextObject);
@@ -28,4 +28,4 @@ const addText = async () => {
   }
 };
 
-addText();
+//addText({ developer: ["Oleh", "Zemfira", "Vitalii"] });

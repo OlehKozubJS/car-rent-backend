@@ -1,1 +1,5 @@
-{"admins":["Alex","Andrii","Vasyl"],"clients":["Anna","Alina","Tamara"],"developers":["Oleh","Zemfira","Vitalii"]}
+{
+  "admins": ["Alex", "Andrii", "Vasyl"],
+  "clients": ["Anna", "Alina", "Tamara"],
+  "developers": ["Oleh", "Zemfira", "Vitalii"]
+}
