@@ -1,6 +1,3 @@
-console.log("Welcome to Node.js, folks!");
-
-const { error } = require("console");
 const { writeFile, readFile, appendFile } = require("fs/promises");
 
 const getText = async () => {
