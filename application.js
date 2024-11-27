@@ -1,5 +1,8 @@
 const { writeFile, readFile, appendFile } = require("fs/promises");
 
+const {} = require();
+
+/*
 const getText = async () => {
   try {
     const data = await readFile("./users.json", "utf-8");
@@ -24,5 +27,5 @@ const addText = async (newData) => {
     console.log(error.message);
   }
 };
-
+*/
 //addText({ developer: ["Oleh", "Zemfira", "Vitalii"] });
