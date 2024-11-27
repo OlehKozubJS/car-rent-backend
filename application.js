@@ -14,11 +14,15 @@ const getText = async () => {
 
 const addText = async () => {
   try {
-    const oldData = await readFile("./users.json", "utf-8");
-    const newData = await JSON.parse(oldData);
-    const newDataClients = await newData.clients;
-    console.log(newDataClients);
-    //await writeFile("./users.json", JSON.stringify(newData));
+    const oldTextJSON = await readFile("./users.json", "utf-8");
+    const oldTextObject = await JSON.parse(oldTextJSON);
+    const newTextObject = {
+      ...oldTextObject,
+      developers: ["Oleh", "Zemfira", "Vitalii"],
+    };
+    console.log(newTextObject);
+    const newTextJSON = JSON.stringify(newTextObject);
+    await writeFile("./users.json", newTextJSON);
   } catch (error) {
     console.log(error.message);
   }
