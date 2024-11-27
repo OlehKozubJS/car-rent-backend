@@ -15,9 +15,12 @@ const getText = async () => {
 const addText = async () => {
   try {
     const oldData = await readFile("./users.json", "utf-8");
-    const newData = { ...oldData, developers: ["Oleh", "Zemfira", "Vitalii"] };
-    await writeFile("./users.json", newData);
+    const newData = await oldData.clients;
+    console.log(newData);
+    //await writeFile("./users.json", JSON.stringify(newData));
   } catch (error) {
     console.log(error.message);
   }
 };
+
+addText();
