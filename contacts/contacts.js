@@ -11,23 +11,15 @@ const tryCatcher = async (callback, params) => {
 };
 
 const getText = async () => {
-  try {
-    const data = await readFile("./simpleTextFile.txt", "utf-8");
-    console.log(data);
-  } catch (error) {
-    console.log(error.message);
-  }
+  const data = await readFile("./simpleTextFile.txt", "utf-8");
+  console.log(data);
 };
 
 const addText = async (newData) => {
-  try {
-    const oldText = await readFile("./simpleTextFile.txt", "utf-8");
-    const newText = oldText + newData;
-    console.log(newText);
-    await writeFile("./simpleTextFile.txt", newText);
-  } catch (error) {
-    console.log(error.message);
-  }
+  const oldText = await readFile("./simpleTextFile.txt", "utf-8");
+  const newText = oldText + newData;
+  console.log(newText);
+  await writeFile("./simpleTextFile.txt", newText);
 };
 
 //addText({ developer: ["Oleh", "Zemfira", "Vitalii"] });
