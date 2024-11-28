@@ -23,6 +23,7 @@ const addText = async (newData) => {
   try {
     const oldText = await readFile("./simpleTextFile.txt", "utf-8");
     const newText = oldText + newData;
+    console.log(newText);
     await writeFile("./simpleTextFile.txt", newText);
   } catch (error) {
     console.log(error.message);
