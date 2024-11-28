@@ -4,3 +4,5 @@ const express = require("express");
 const cors = require("cors");
 
 const application = express();
+
+application.listen(3001);
