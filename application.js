@@ -19,22 +19,26 @@ application.use(cors());
 
 application.get(
   "/",
-  errorHandler((request, response) => {
-    response.send("<p>Hello dudes!</p>");
+  errorHandler(async (request, response) => {
+    await response.send("<p>Hello, dear comrades!</p>");
   })
 );
 
 application.get(
   "/get",
-  errorHandler((request, response) => {
-    response.send("<p>Hello! I am VioletFox! Progress Wins!</p>");
+  errorHandler(async (request, response) => {
+    await response.send("<p>Hello! I am VioletFox! Progress Wins!</p>");
   })
 );
 
-application.post(
-  "/put",
-  errorHandler((request, response) => {
-    const {} = request;
+application.get(
+  "/post/:first/:second",
+  errorHandler(async (request, response) => {
+    const { params } = await request;
+    const { first, second } = await params;
+    await response.send(
+      `<p>${first}+${second}=${Number(first) + Number(second)}</p>`
+    );
   })
 );
 
