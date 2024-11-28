@@ -1,5 +1,7 @@
 const { writeFile, readFile, appendFile } = require("fs/promises");
 
+const contacts = require("./contacts");
+
 const getText = async () => {
   try {
     const data = await readFile("./users.json", "utf-8");
