@@ -44,4 +44,6 @@ application.get(
   })
 );
 
-application.listen(3001);
+application.listen(3001, () => {
+  console.log("Server is working!");
+});
