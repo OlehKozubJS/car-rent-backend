@@ -42,5 +42,3 @@ const addText = async (newData) => {
     const newTextJSON = JSON.stringify(newTextObject);
 
 */
-
-addText("def");
