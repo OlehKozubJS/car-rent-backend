@@ -2,6 +2,16 @@ const { writeFile, readFile, appendFile } = require("fs/promises");
 
 const contacts = require("./contacts");
 
+const tryCatcher = (callback) => {
+  return async () => {
+    try {
+      await callback();
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+};
+
 const getText = async () => {
   try {
     const data = await readFile("./users.json", "utf-8");
