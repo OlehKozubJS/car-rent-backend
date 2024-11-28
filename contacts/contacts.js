@@ -2,14 +2,12 @@ const { writeFile, readFile, appendFile } = require("fs/promises");
 
 const contacts = require("./contacts");
 
-const tryCatcher = (callback) => {
-  return async () => {
-    try {
-      await callback();
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
+const tryCatcher = async (callback, params) => {
+  try {
+    await callback(params);
+  } catch (error) {
+    console.log(error.message);
+  }
 };
 
 const getText = async () => {
