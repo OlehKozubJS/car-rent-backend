@@ -32,7 +32,7 @@ application.get(
 );
 
 application.post(
-  "",
+  "/put",
   errorHandler((request, response) => {
     const {} = request;
   })
