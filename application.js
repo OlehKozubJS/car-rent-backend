@@ -1,6 +1,6 @@
 const { writeFile, readFile, appendFile } = require("fs/promises");
-
-const {} = require();
+const application = require("express");
+const cors = require("cors");
 
 /*
 const getText = async () => {
