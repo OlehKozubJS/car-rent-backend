@@ -20,14 +20,18 @@ application.use(cors());
 application.get(
   "/",
   errorHandler(async (request, response) => {
-    await response.send("<p>Hello, dear comrades!</p>");
+    await response.send(
+      '<p>Hello, dear comrades!</p><a href="/get">Get page</a>'
+    );
   })
 );
 
 application.get(
   "/get",
   errorHandler(async (request, response) => {
-    await response.send("<p>Hello! I am VioletFox! Progress Wins!</p>");
+    await response.send(
+      '<p>Hello! I am VioletFox! Progress Wins!</p><a href="/">Main page</a>'
+    );
   })
 );
 
@@ -39,7 +43,7 @@ application.get(
     await response.send(
       `<p style="background-color: rgb(220, 220, 240); color: rgb(180, 160, 200);">${first}+${second}=${
         Number(first) + Number(second)
-      }</p>`
+      }</p><a href="/">Main page</a>`
     );
   })
 );
