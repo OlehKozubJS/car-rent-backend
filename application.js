@@ -17,16 +17,25 @@ const application = express();
 
 application.use(cors());
 
-application.get("/", (request, response) => {
-  response.send("<p>Hello dudes!</p>");
-});
+application.get(
+  "/",
+  errorHandler((request, response) => {
+    response.send("<p>Hello dudes!</p>");
+  })
+);
 
-application.get("/get", (request, response) => {
-  response.send("<p>Hello! I am VioletFox! Progress Wins!</p>");
-});
+application.get(
+  "/get",
+  errorHandler((request, response) => {
+    response.send("<p>Hello! I am VioletFox! Progress Wins!</p>");
+  })
+);
 
-application.post("", (request, response) => {
-  const {} = request;
-});
+application.post(
+  "",
+  errorHandler((request, response) => {
+    const {} = request;
+  })
+);
 
 application.listen(3001);
