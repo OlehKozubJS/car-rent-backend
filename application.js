@@ -13,6 +13,18 @@ const errorHandler = (callback) => {
   };
 };
 
+const getText = async () => {
+  const data = await readFile("./simpleTextFile.txt", "utf-8");
+  console.log(data);
+};
+
+const addText = async (newData) => {
+  const oldText = await readFile("./simpleTextFile.txt", "utf-8");
+  const newText = oldText + newData;
+  console.log(newText);
+  await writeFile("./simpleTextFile.txt", newText);
+};
+
 const application = express();
 
 application.use(cors());
