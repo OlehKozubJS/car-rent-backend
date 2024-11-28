@@ -12,7 +12,7 @@ const tryCatcher = async (callback, params) => {
 
 const getText = async () => {
   try {
-    const data = await readFile("./users.json", "utf-8");
+    const data = await readFile("./simpleTextFile.txt", "utf-8");
     console.log(data);
   } catch (error) {
     console.log(error.message);
@@ -21,7 +21,17 @@ const getText = async () => {
 
 const addText = async (newData) => {
   try {
-    const oldTextJSON = await readFile("./users.json", "utf-8");
+    const oldText = await readFile("./simpleTextFile.txt", "utf-8");
+    const newText = oldText + newData;
+    await writeFile("./simpleTextFile.txt", newText);
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+//addText({ developer: ["Oleh", "Zemfira", "Vitalii"] });
+/*
+
     const oldTextObject = await JSON.parse(oldTextJSON);
     const newTextObject = await {
       ...oldTextObject,
@@ -29,10 +39,7 @@ const addText = async (newData) => {
     };
     console.log(newTextObject);
     const newTextJSON = JSON.stringify(newTextObject);
-    await writeFile("./users.json", newTextJSON);
-  } catch (error) {
-    console.log(error.message);
-  }
-};
 
-//addText({ developer: ["Oleh", "Zemfira", "Vitalii"] });
+*/
+
+addText("def");
