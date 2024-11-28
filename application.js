@@ -32,10 +32,10 @@ application.get(
 );
 
 application.get(
-  "/post/:first/:second",
+  "/post",
   errorHandler(async (request, response) => {
-    const { params } = await request;
-    const { first, second } = await params;
+    const { query } = await request;
+    const { first, second } = await query;
     await response.send(
       `<p style="background-color: rgb(220, 220, 240); color: rgb(180, 160, 200);">${first}+${second}=${
         Number(first) + Number(second)
