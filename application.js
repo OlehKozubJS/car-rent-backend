@@ -14,13 +14,13 @@ const errorHandler = (callback) => {
 };
 
 const getText = async () => {
-  return await readFile("./simpleTextFile.txt", "utf-8");
+  return await readFile("./contacts/simpleTextFile.txt", "utf-8");
 };
 
 const addText = async (newData) => {
   const oldText = await readFile("./simpleTextFile.txt", "utf-8");
   const newText = oldText + newData;
-  await writeFile("./simpleTextFile.txt", newText);
+  await writeFile("./contacts/simpleTextFile.txt", newText);
 };
 
 const application = express();
