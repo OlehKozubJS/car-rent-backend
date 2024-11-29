@@ -18,7 +18,7 @@ const getText = async () => {
 };
 
 const addText = async (newData) => {
-  const oldText = await readFile("./simpleTextFile.txt", "utf-8");
+  const oldText = await readFile("./contacts/simpleTextFile.txt", "utf-8");
   const newText = oldText + newData;
   await writeFile("./contacts/simpleTextFile.txt", newText);
 };
