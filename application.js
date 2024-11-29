@@ -63,7 +63,7 @@ application.get(
   errorHandler(async (request, response) => {
     const { params } = await request;
     const { text } = await params;
-    await addText(text);
+    await response.send(`<p>${text}</p>`);
   })
 );
 
