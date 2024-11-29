@@ -62,6 +62,7 @@ application.get(
   "/addText/:text",
   errorHandler(async (request, response) => {
     const { params } = await request;
+    const { text } = await params;
   })
 );
 
