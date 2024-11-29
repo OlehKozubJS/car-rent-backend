@@ -59,9 +59,9 @@ application.get(
 );
 
 application.get(
-  "/addText",
+  "/addText/:text",
   errorHandler(async (request, response) => {
-    const { query } = await request;
+    const { params } = await request;
   })
 );
 
