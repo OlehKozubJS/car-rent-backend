@@ -14,14 +14,12 @@ const errorHandler = (callback) => {
 };
 
 const getText = async () => {
-  const data = await readFile("./simpleTextFile.txt", "utf-8");
-  console.log(data);
+  return await readFile("./simpleTextFile.txt", "utf-8");
 };
 
 const addText = async (newData) => {
   const oldText = await readFile("./simpleTextFile.txt", "utf-8");
   const newText = oldText + newData;
-  console.log(newText);
   await writeFile("./simpleTextFile.txt", newText);
 };
 
@@ -57,6 +55,13 @@ application.get(
         Number(first) + Number(second)
       }</p><a href="/">Main page</a>`
     );
+  })
+);
+
+application.get(
+  "/addText",
+  errorHandler(async (request, response) => {
+    const { query } = await request;
   })
 );
 
