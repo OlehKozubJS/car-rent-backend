@@ -3,16 +3,6 @@ const { writeFile, readFile, appendFile } = require("fs/promises");
 const cars = "./advertsCars.json";
 const makes = "./makes.json";
 
-const errorHandler = (callback) => {
-  return async (request, response, next) => {
-    try {
-      callback(request, response);
-    } catch (error) {
-      next(error);
-    }
-  };
-};
-
 const getCars = async () => {
   return await readFile(cars, "utf-8");
 };
