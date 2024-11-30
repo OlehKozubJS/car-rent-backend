@@ -6,7 +6,7 @@ const makes = "./makes.json";
 const getCars = async () => {
   const carsData = await readFile(cars, "utf-8");
   console.log(carsData);
-  return carsData;
+  //return carsData;
 };
 
 const setCars = async (newCars) => {
