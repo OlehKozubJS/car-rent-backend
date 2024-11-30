@@ -3,6 +3,8 @@ const { writeFile, readFile, appendFile } = require("fs/promises");
 const express = require("express");
 const cors = require("cors");
 
+const { errorHandler } = require("./hooks");
+
 const application = express();
 
 application.use(cors());
