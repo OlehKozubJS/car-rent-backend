@@ -1,5 +1,8 @@
 const { writeFile, readFile, appendFile } = require("fs/promises");
 
+const cars = "./advertsCars.json";
+const makes = "./makes.json";
+
 const errorHandler = (callback) => {
   return async (request, response, next) => {
     try {
@@ -10,15 +13,18 @@ const errorHandler = (callback) => {
   };
 };
 
-const getText = async () => {
-  return await readFile("./contacts/simpleTextFile.txt", "utf-8");
+const getCars = async () => {
+  return await readFile(cars, "utf-8");
 };
 
-const setText = async (newText) => {
-  await writeFile("./contacts/simpleTextFile.txt", newText);
+const setCars = async (newCars) => {
+  await writeFile(cars, newCars);
 };
 
-const addText = async (newText) => {
-  const oldText = await readFile("./contacts/simpleTextFile.txt", "utf-8");
-  await writeFile("./contacts/simpleTextFile.txt", oldText + newText);
+const addText = async (newCars) => {
+  const oldCars = await readFile(cars, "utf-8");
+  const oldCarsObject = JSON.parse(oldCars);
+  await writeFile(cars, oldText + newText);
 };
+
+module.exports = {};
