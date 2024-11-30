@@ -1,3 +1,3 @@
-const {} = require("../database");
+const { getCars, setCars, addCar } = require("../database");
 
-module.exports = {};
+module.exports = { getCars, setCars, addCar };
