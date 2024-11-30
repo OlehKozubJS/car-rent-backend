@@ -1,4 +1,6 @@
 const cars = require("./advertsCars.json");
 const makes = require("./makes.json");
 
-module.exports = { cars, makes };
+const { getCars, setCars, addCar } = require("./carsDatabaseFunctions");
+
+module.exports = { cars, makes, getCars, setCars, addCar };
