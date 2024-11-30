@@ -1,8 +1,8 @@
 const { getCars } = require("./imports");
 
 const getBackendInformation = async (request, response) => {
-  await getCars();
-  await response.send(`cars`);
+  const carsData = await getCars();
+  await response.send(carsData);
 };
 
 module.exports = { getBackendInformation };
