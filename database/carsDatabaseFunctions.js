@@ -1,12 +1,10 @@
 const { writeFile, readFile, appendFile } = require("fs/promises");
 const { resolve } = require("path");
 
-const cars = "./advertsCars.json";
-const makes = "./makes.json";
+const carsPath = resolve("database", "advertsCars.json");
 
 const getCars = async () => {
-  //const cars = resolve("database", "advertsCars.json");
-  const carsData = await readFile("./advertsCars", "utf-8");
+  const carsData = await readFile(carsPath, "utf-8");
   return carsData;
 };
 
