@@ -4,9 +4,9 @@ const cars = "./advertsCars.json";
 const makes = "./makes.json";
 
 const getCars = async () => {
-  const carsData = await readFile("../contacts/simpleTextFile.txt", "utf-8");
-  await console.log(carsData);
-  return await carsData;
+  const carsData = await readFile(cars, "utf-8");
+  console.log(carsData);
+  return carsData;
 };
 
 const setCars = async (newCars) => {
