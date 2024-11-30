@@ -8,4 +8,4 @@ const errorHandler = (callback) => {
   };
 };
 
-module.exports = { getCars, setCars, addCar };
+module.exports = { errorHandler };
