@@ -21,7 +21,7 @@ const setCars = async (newCars) => {
   await writeFile(cars, newCars);
 };
 
-const addCars = async (newCar) => {
+const addCar = async (newCar) => {
   const oldCars = await readFile(cars, "utf-8");
   const oldCarsObject = await JSON.parse(oldCars);
   const newCarsObject = await { ...oldCarsObject, newCar };
@@ -29,4 +29,4 @@ const addCars = async (newCar) => {
   await writeFile(cars, newCars);
 };
 
-module.exports = {};
+module.exports = { getCars, setCars, addCar };
