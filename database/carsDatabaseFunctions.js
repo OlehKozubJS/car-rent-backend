@@ -5,8 +5,8 @@ const cars = "./advertsCars.json";
 const makes = "./makes.json";
 
 const getCars = async () => {
-  const cars = resolve("database", "advertsCars.json");
-  const carsData = await readFile(cars, "utf-8");
+  //const cars = resolve("database", "advertsCars.json");
+  const carsData = await readFile("../database/advertsCars.json", "utf-8");
   return carsData;
 };
 
