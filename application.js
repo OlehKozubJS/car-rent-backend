@@ -18,7 +18,7 @@ const getText = async () => {
 };
 
 const setText = async (newText) => {
-  return writeFile("./contacts/simpleTextFile.txt", newText);
+  await writeFile("./contacts/simpleTextFile.txt", newText);
 };
 
 const addText = async (newText) => {
