@@ -18,7 +18,7 @@ const addCar = async (newCar) => {
   const oldCarsObject = await JSON.parse(oldCars);
   const newCarsObject = await { ...oldCarsObject, newCar };
   const newCars = await JSON.stringify(newCarsObject);
-  await writeFile(cars, newCars);
+  await writeFile(carsPath, newCars);
 };
 
 module.exports = { getCars, setCars, addCar };
