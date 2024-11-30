@@ -3,16 +3,6 @@ const { writeFile, readFile, appendFile } = require("fs/promises");
 const express = require("express");
 const cors = require("cors");
 
-const errorHandler = (callback) => {
-  return async (request, response, next) => {
-    try {
-      callback(request, response);
-    } catch (error) {
-      next(error);
-    }
-  };
-};
-
 const getText = async () => {
   return await readFile("./contacts/simpleTextFile.txt", "utf-8");
 };
