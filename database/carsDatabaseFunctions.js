@@ -5,8 +5,7 @@ const carsPath = resolve("database", "advertsCars.json");
 const makesPath = resolve("database", "makes.json");
 
 const getCars = async () => {
-  const carsData = await readFile(carsPath, "utf-8");
-  return carsData;
+  return await readFile(carsPath, "utf-8");
 };
 
 const setCars = async (newCars) => {
