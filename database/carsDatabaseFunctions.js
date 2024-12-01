@@ -14,9 +14,9 @@ const setCars = async (newCars) => {
 
 const addCar = async (newCar) => {
   const oldCars = await readFile(carsPath, "utf-8");
-  const oldCarsObject = await JSON.parse(oldCars);
-  const newCarsObject = [...oldCarsObject, newCar];
-  const newCars = JSON.stringify(newCarsObject);
+  const oldCarsArray = await JSON.parse(oldCars);
+  const newCarsArray = [...oldCarsArray, newCar];
+  const newCars = JSON.stringify(newCarsArray);
   await writeFile(carsPath, newCars);
 };
 
