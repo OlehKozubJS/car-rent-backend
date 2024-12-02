@@ -5,7 +5,9 @@ const getBackendInformation = async (request, response) => {
   const carsDataArray = JSON.parse(carsData);
   await response.send(
     `<ul>${carsDataArray.map((carDataObject) => {
-      return `<li>${JSON.stringify(carDataObject)}</li>`;
+      return `<li>${Object.keys(carDataObject).map((carDataObjectKey) => {
+        return `<p>${carDataObjectKey}: ${carDataObject[carDataObjectKey]}</p>`;
+      })}</li>`;
     })}</ul>`
   );
 };
