@@ -5,11 +5,11 @@ const getBackendInformation = async (request, response) => {
   const carsDataArray = JSON.parse(carsData);
   await response.send(
     `<ul>${carsDataArray.map((carDataObject) => {
-      return `<li>${Object.keys(carDataObject).map((carDataObjectKey) => {
-        if (carDataObject[carDataObjectKey] !== ",") {
+      return `<li>${Object.keys(carDataObject)
+        .filter((carDataObjectKey) => carDataObject[carDataObjectKey] !== ",")
+        .map((carDataObjectKey) => {
           return `<p>${carDataObjectKey}: ${carDataObject[carDataObjectKey]}</p>`;
-        }
-      })}</li>`;
+        })}</li>`;
     })}</ul>`
   );
 };
