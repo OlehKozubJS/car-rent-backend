@@ -5,7 +5,11 @@ const getBackendInformation = async (request, response) => {
   const carsDataArray = JSON.parse(carsData);
   await response.send(
     `<ul>${carsDataArray.map((carDataObject) => {
-      return `<li>${Object.keys(carDataObject)}</li>`;
+      return `<li>${Object.keys(carDataObject).map((carDataObjectKey) => {
+        if (carDataObject[carDataObjectKey] !== ",") {
+          return `<p>${carDataObjectKey}: ${carDataObject[carDataObjectKey]}</p>`;
+        }
+      })}</li>`;
     })}</ul>`
   );
 };
@@ -13,10 +17,6 @@ const getBackendInformation = async (request, response) => {
 module.exports = { getBackendInformation };
 /*
 
-  .map((carDataObjectKey) => {
-        if (carDataObject[carDataObjectKey] !== ",") {
-          return `<p>${carDataObjectKey}: ${carDataObject[carDataObjectKey]}</p>`;
-        }
-      })
+
 
 */
