@@ -27,7 +27,7 @@ const getBackendInformation = async (request, response) => {
       return `<li style="background-color: rgb(230, 200, 200);>${Object.keys(
         carDataObject
       ).map((carDataObjectKey) => {
-        return `<p style="background-color: rgb(200, 200, 230);">${carDataObjectKey}: ${carDataObject[carDataObjectKey]}</p>`;
+        return `<p style="background-color: rgb(200, 200, 230) border: 3px dashed rgb(200, 215, 200);">${carDataObjectKey}: ${carDataObject[carDataObjectKey]}</p>`;
       })}</li>`;
     })}</ul>`
   );
