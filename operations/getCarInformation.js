@@ -1,4 +1,4 @@
-const getCarInformation = async (carInformationObject) => {
+const getCarInformation = (carInformationObject) => {
   return `
     <ul>
       ${Object.keys(carInformationObject)
