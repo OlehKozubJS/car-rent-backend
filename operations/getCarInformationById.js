@@ -6,22 +6,23 @@ const getCarsInformation = async (request, response) => {
 
   const carsInformationString = await getCars();
   const carsInformationArray = JSON.parse(carsInformationString);
+
+  const carInformation = carsInformationArray.find(
+    (carInformationObject) => carInformationObject.id === carId
+  );
+
   await response.send(
     `<a href="/">Return to main page</a>
 
     <h2>Selected car information:</h2>
 
-    ${carsInformationArray
-      .find((carInformationObject) => {
-        return `<ul>
-          ${Object.keys(carInformationObject)
-            .map((carInformationObjectKey) => {
-              return `<li>${carInformationObjectKey}: ${carInformationObject[carInformationObjectKey]}</li>`;
-            })
-            .join("")}
-        </ul>`;
-      })
-      .join("")}`
+    <ul>
+      ${Object.keys(carInformationObject)
+        .map((carInformationObjectKey) => {
+          return `<li>${carInformationObjectKey}: ${carInformationObject[carInformationObjectKey]}</li>`;
+        })
+        .join("")}
+    </ul>
   );
 };
 
