@@ -3,6 +3,7 @@ const errorHandler = (callback) => {
     try {
       await callback(request, response);
     } catch (error) {
+      response.send(`<p>${error.message}</p>`);
       next(error);
     }
   };
