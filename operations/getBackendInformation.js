@@ -1,23 +1,5 @@
 const { getCars } = require("./imports");
 
-const testCollection = [
-  {
-    firstObjectFirstPorperty: "firstObjectFirstValue",
-    firstObjectSecondProperty: "firstObjectSecondValue",
-    firstObjectThirdPorperty: "firstObjectThirdValue",
-  },
-  {
-    secondObjectFirstProperty: "secondObjectFirstValue",
-    secondObjectSecondProperty: "secondObjectSecondValue",
-    secondObjectThirdProperty: "secondObjectThirdValue",
-  },
-  {
-    thirdObjectFirstProperty: "thirdObjectFirstValue",
-    thirdObjectSecondProperty: "thirdObjectSecondValue",
-    thirdObjectThirdProperty: "thirdObjectThirdValue",
-  },
-];
-
 const getBackendInformation = async (request, response) => {
   const carsData = await getCars();
   const carsDataArray = JSON.parse(carsData);
