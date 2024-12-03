@@ -29,7 +29,11 @@ const testArray = [
 const getBackendInformation = async (request, response) => {
   const carsData = await getCars();
   const carsDataArray = JSON.parse(carsData);
-  await response.send();
+  await response.send(
+    testArray.map((testItem) => {
+      return `<div>${testItem}</div>`;
+    })
+  );
 };
 
 module.exports = { getBackendInformation };
