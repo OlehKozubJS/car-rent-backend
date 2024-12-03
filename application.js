@@ -5,7 +5,6 @@ const { errorHandler } = require("./hooks");
 const {
   getMainBackendPage,
   postBackendInformation,
-  getBackendInformation,
   getCarsInformation,
   getCarInformationById,
   getServerState,
