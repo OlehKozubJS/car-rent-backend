@@ -10,4 +10,4 @@ const getCarInformation = async (carInformationObject) => {
     </ul>`;
 };
 
-module.exports = { getCarsInformation };
+module.exports = { getCarInformation };
