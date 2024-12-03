@@ -4,7 +4,7 @@ const errorHandler = (callback) => {
       await callback(request, response);
     } catch (error) {
       response.send(`<p style="color: red;">!!! ${error} !!!</p>
-        <a>Return to main page</a>`);
+        <a href="/">Return to main page</a>`);
       next(error);
     }
   };
