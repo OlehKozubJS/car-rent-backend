@@ -11,12 +11,13 @@ const getCarsInformation = async (request, response) => {
     <ul>${carsInformationArray
       .map((carInformationObject) => {
         return `<li>
-          <ul>${Object.keys(carInformationObject)
-            .map((carInformationObjectKey) => {
-              return `<li>${carInformationObjectKey}:
+          <ul>
+            ${Object.keys(carInformationObject)
+              .map((carInformationObjectKey) => {
+                return `<li>${carInformationObjectKey}:
               ${carInformationObject[carInformationObjectKey]}</li>`;
-            })
-            .join("")}
+              })
+              .join("")}
           </ul>  
         </li>`;
       })
