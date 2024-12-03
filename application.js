@@ -15,7 +15,7 @@ application.use(cors());
 
 application.get("/", errorHandler(getMainBackendPage));
 
-application.get("/getCars", errorHandler(getBackendInformation));
+application.get("/getCars", errorHandler(getCarsInformation));
 
 application.get("/addCars", errorHandler(postBackendInformation));
 
