@@ -6,6 +6,7 @@ const {
   getMainBackendPage,
   postBackendInformation,
   getBackendInformation,
+  getCarsInformation,
   getServerState,
 } = require("./operations");
 
