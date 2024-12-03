@@ -22,8 +22,8 @@ const getCarsInformation = async (request, response) => {
           return `<li>${carInformationObjectKey}: ${carInformationObject[carInformationObjectKey]}</li>`;
         })
         .join("")}
-    </ul>
+    </ul>`
   );
 };
 
-module.exports = { getCarsInformation };
+module.exports = { getCarInformationById };
