@@ -37,10 +37,3 @@ const getBackendInformation = async (request, response) => {
 };
 
 module.exports = { getBackendInformation };
-
-/*.filter((carDataObjectKey) => carDataObject[carDataObjectKey] !== ",")*/
-/*
-
-
-
-*/
