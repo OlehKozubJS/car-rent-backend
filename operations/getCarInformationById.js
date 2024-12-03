@@ -1,6 +1,9 @@
 const { getCars } = require("./imports");
 
 const getCarsInformation = async (request, response) => {
+  const { params } = await request;
+  const { carId } = await params;
+
   const carsInformationString = await getCars();
   const carsInformationArray = JSON.parse(carsInformationString);
   await response.send(
