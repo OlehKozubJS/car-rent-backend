@@ -18,6 +18,8 @@ application.get("/", errorHandler(getMainBackendPage));
 
 application.get("/getCars", errorHandler(getCarsInformation));
 
+application.get("/getCarsById/:carId", errorHandler(getCarInformationById));
+
 application.get("/addCars", errorHandler(postBackendInformation));
 
 application.listen(3001, getServerState);
