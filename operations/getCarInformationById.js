@@ -1,5 +1,7 @@
 const { getCars } = require("./imports");
 
+const { getCarInformation } = require("./getCarInformation.js");
+
 const getCarInformationById = async (request, response) => {
   const { params } = await request;
   const { carId } = await params;
