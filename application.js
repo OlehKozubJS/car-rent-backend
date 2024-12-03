@@ -17,6 +17,6 @@ application.get("/", errorHandler(getMainBackendPage));
 
 application.get("/getCars", errorHandler(getBackendInformation));
 
-application.get("/post", errorHandler(postBackendInformation));
+application.get("/addCars", errorHandler(postBackendInformation));
 
 application.listen(3001, getServerState);
