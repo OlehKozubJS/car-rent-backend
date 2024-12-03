@@ -8,7 +8,7 @@ const getBackendInformation = async (request, response) => {
       .map((carDataObject) => {
         return `<li><ul>${Object.keys(carDataObject)
           .map((carDataObjectKey) => {
-            return `<li>${carDataObjectKey}: ${carDataObject[carDataObjectKey]}</li>`;
+            return `<li>${carDataObjectKeys}: ${carDataObject[carDataObjectKey]}</li>`;
           })
           .join("")}</ul></li>`;
       })
