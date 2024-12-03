@@ -24,10 +24,10 @@ const getBackendInformation = async (request, response) => {
   console.log(carsDataArray);
   await response.send(
     `<ul>${testCollection.map((carDataObject) => {
-      return `<li style="background-color: blue;>${Object.keys(
+      return `<li style="background-color: rgb(230, 200, 200);>${Object.keys(
         carDataObject
       ).map((carDataObjectKey) => {
-        return `<p style="background-color: red;">${carDataObjectKey}: ${carDataObject[carDataObjectKey]}</p>`;
+        return `<p style="background-color: rgb(200, 200, 230);">${carDataObjectKey}: ${carDataObject[carDataObjectKey]}</p>`;
       })}</li>`;
     })}</ul>`
   );
