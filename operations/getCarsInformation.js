@@ -13,7 +13,8 @@ const getCarsInformation = async (request, response) => {
         return `<li>
           <ul>${Object.keys(carInformationObject)
             .map((carInformationObjectKey) => {
-              return `<li>${carInformationObjectKey}: ${carInformationObject[carInformationObjectKey]}</li>`;
+              return `<li>${carInformationObjectKey}: 
+              ${carInformationObject[carInformationObjectKey]}</li>`;
             })
             .join("")}
           </ul>  
