@@ -3,7 +3,7 @@ const errorHandler = (callback) => {
     try {
       await callback(request, response);
     } catch (error) {
-      response.send(`<p style="color: red;">!!!${error}!!!</p>`);
+      response.send(`<p style="color: red;">!!! ${error} !!!</p>`);
       next(error);
     }
   };
