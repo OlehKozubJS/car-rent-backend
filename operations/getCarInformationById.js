@@ -12,7 +12,7 @@ const getCarsInformation = async (request, response) => {
     <h2>Selected car information:</h2>
 
     ${carsInformationArray
-      .map((carInformationObject) => {
+      .find((carInformationObject) => {
         return `<ul>
           ${Object.keys(carInformationObject)
             .map((carInformationObjectKey) => {
