@@ -7,7 +7,7 @@ const getBackendInformation = async (request, response) => {
   await response.send(
     `<ul>${carsDataArray.map((carDataObject) => {
       return `<li style="background-color: blue;>${Object.keys(carDataObject)
-        .filter((carDataObjectKey) => carDataObject[carDataObjectKey] !== ",")
+        /*.filter((carDataObjectKey) => carDataObject[carDataObjectKey] !== ",")*/
         .map((carDataObjectKey) => {
           return `<p style="background-color: red;">${carDataObjectKey}: ${carDataObject[carDataObjectKey]}</p>`;
         })}</li>`;
