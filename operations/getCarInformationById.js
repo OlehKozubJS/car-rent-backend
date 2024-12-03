@@ -8,7 +8,7 @@ const getCarInformationById = async (request, response) => {
   const carsInformationArray = JSON.parse(carsInformationString);
 
   const carInformationObject = await carsInformationArray.find(
-    (car) => car.id === carId
+    (car) => car.id === Number(carId)
   );
 
   await response.send(
