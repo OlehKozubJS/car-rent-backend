@@ -19,7 +19,7 @@ const getCarInformationById = async (request, response) => {
     <ul>
       ${Object.keys(carInformationObject)
         .map((carInformationObjectKey) => {
-          return `<li>${carInformationObjectKey}: 
+          return `<li>${carInformationObjectKey}:
           ${carInformationObject[carInformationObjectKey]}</li>`;
         })
         .join("")}
