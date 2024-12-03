@@ -7,7 +7,7 @@ const getCarInformationById = async (request, response) => {
   const carsInformationString = await getCars();
   const carsInformationArray = JSON.parse(carsInformationString);
 
-  const carInformationObject = carsInformationArray.find(
+  const carInformationObject = await carsInformationArray.find(
     (car) => car.id === carId
   );
 
