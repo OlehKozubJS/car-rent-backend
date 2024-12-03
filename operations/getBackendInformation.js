@@ -21,7 +21,6 @@ const testCollection = [
 const getBackendInformation = async (request, response) => {
   const carsData = await getCars();
   const carsDataArray = JSON.parse(carsData);
-  console.log(carsDataArray);
   await response.send(
     `<ul>${testCollection.map((carDataObject) => {
       return `<li style="background-color: rgb(230, 200, 200);>${Object.keys(
@@ -36,3 +35,8 @@ const getBackendInformation = async (request, response) => {
 module.exports = { getBackendInformation };
 
 /*.filter((carDataObjectKey) => carDataObject[carDataObjectKey] !== ",")*/
+/*
+
+
+
+*/
