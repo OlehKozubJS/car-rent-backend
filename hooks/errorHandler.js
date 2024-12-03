@@ -1,7 +1,7 @@
 const errorHandler = (callback) => {
   return async (request, response, next) => {
     try {
-      callback(request, response);
+      await callback(request, response);
     } catch (error) {
       next(error);
     }
