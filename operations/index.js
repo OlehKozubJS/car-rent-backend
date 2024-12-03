@@ -10,5 +10,6 @@ module.exports = {
   postBackendInformation,
   getBackendInformation,
   getCarsInformation,
+  getCarInformationById,
   getServerState,
 };
