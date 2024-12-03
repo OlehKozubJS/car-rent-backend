@@ -5,7 +5,7 @@ const getMainBackendPage = async (request, response) => {
     `<main>
       <p>Welcome! This is the backend page of the Car Rent project</p>
       <a href="/getCars">Information about every car</a>
-      <p>${getCarFilter()}</p>
+      <p style="background-color: rgb(150, 160, 120);">${getCarFilter()}</p>
     </main>`
   );
 };
