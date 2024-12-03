@@ -4,7 +4,7 @@ const getCarInformation = async (carInformationObject) => {
       ${Object.keys(carInformationObject)
         .map((carInformationObjectKey) => {
           return `<li>${carInformationObjectKey}:
-        ${carInformationObject[carInformationObjectKey]}</li>`;
+          ${carInformationObject[carInformationObjectKey]}</li>`;
         })
         .join("")}
     </ul>`;
