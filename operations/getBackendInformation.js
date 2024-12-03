@@ -22,7 +22,7 @@ const getBackendInformation = async (request, response) => {
   const carsData = await getCars();
   const carsDataArray = JSON.parse(carsData);
   await response.send(
-    `<ul>${testCollection
+    `<ul>${carsDataArray
       .map((carDataObject) => {
         console.log(carDataObject);
         return `<li style="background-color: rgb(230, 200, 200);"><ul>${Object.keys(
