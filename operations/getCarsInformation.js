@@ -6,7 +6,7 @@ const getCarsInformation = async (request, response) => {
   await response.send(
     `<a href="/">Return to main page</a>
 
-    <h2>Cars Information:</h2>
+    <h2>Cars information:</h2>
 
     <ul>${carsInformationArray
       .map((carInformationObject) => {
