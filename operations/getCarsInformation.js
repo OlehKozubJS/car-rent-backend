@@ -1,5 +1,7 @@
 const { getCars } = require("./imports");
 
+const { getCarInformation } = require("./getCarInformation");
+
 const getCarsInformation = async (request, response) => {
   const carsInformationString = await getCars();
   const carsInformationArray = JSON.parse(carsInformationString);
@@ -11,14 +13,7 @@ const getCarsInformation = async (request, response) => {
     <ul>${carsInformationArray
       .map((carInformationObject) => {
         return `<li>
-          <ul>
-            ${Object.keys(carInformationObject)
-              .map((carInformationObjectKey) => {
-                return `<li>${carInformationObjectKey}:
-              ${carInformationObject[carInformationObjectKey]}</li>`;
-              })
-              .join("")}
-          </ul>  
+          ${getCarInformation}  
         </li>`;
       })
       .join("")}
