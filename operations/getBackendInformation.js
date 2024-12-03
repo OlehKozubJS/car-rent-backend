@@ -7,17 +7,13 @@ const getBackendInformation = async (request, response) => {
   await response.send(
     `<ul>${carsDataArray.map((carDataObject) => {
       return `<li style="background-color: blue;>${Object.keys(carDataObject)
-        /*.filter((carDataObjectKey) => carDataObject[carDataObjectKey] !== ",")*/
-        .map((carDataObjectKey) => {
-          return `<p style="background-color: red;">${carDataObjectKey}: ${carDataObject[carDataObjectKey]}</p>`;
-        })}</li>`;
+      .map((carDataObjectKey) => {
+        return `<p style="background-color: red;">${carDataObjectKey}: ${carDataObject[carDataObjectKey]}</p>`;
+      })}</li>`;
     })}</ul>`
   );
 };
 
 module.exports = { getBackendInformation };
-/*
 
-
-
-*/
+/*.filter((carDataObjectKey) => carDataObject[carDataObjectKey] !== ",")*/
