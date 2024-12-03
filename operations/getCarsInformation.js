@@ -16,4 +16,4 @@ const getCarsInformation = async (request, response) => {
   );
 };
 
-module.exports = { getBackendInformation };
+module.exports = { getCarsInformation };
