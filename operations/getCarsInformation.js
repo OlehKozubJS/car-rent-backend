@@ -4,7 +4,7 @@ const getCarsInformation = async (request, response) => {
   const carsInformationString = await getCars();
   const carsInformationArray = JSON.parse(carsData);
   await response.send(
-    `<ul>${carsInformationArray
+    `<h2>Cars Information:</h2><ul>${carsInformationArray
       .map((carInformationObject) => {
         return `<li><ul>${Object.keys(carInformationObject)
           .map((carInformationObjectKey) => {
