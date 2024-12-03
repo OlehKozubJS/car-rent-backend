@@ -19,7 +19,7 @@ application.get("/", errorHandler(getMainBackendPage));
 
 application.get("/getCars", errorHandler(getCarsInformation));
 
-application.get("/getCarsById/:carId", errorHandler(getCarInformationById));
+application.get("/getCarById/:carId", errorHandler(getCarInformationById));
 
 application.get("/addCars", errorHandler(postBackendInformation));
 
