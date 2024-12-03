@@ -12,7 +12,8 @@ const testCollection = [
     secondObjectThirdProperty: "secondObjectThirdValue",
   },
   {
-    thirdObjectFirstProperty: "",
+    thirdObjectFirstProperty: "thirdObjectFirstValue",
+    thirdObjectSecondProperty: "thirdObjectSecondValue",
     thirdObjectThirdProperty: "thirdObjectThirdValue",
   },
 ];
@@ -22,7 +23,7 @@ const getBackendInformation = async (request, response) => {
   const carsDataArray = JSON.parse(carsData);
   console.log(carsDataArray);
   await response.send(
-    `<ul>${carsDataArray.map((carDataObject) => {
+    `<ul>${testCollection.map((carDataObject) => {
       return `<li style="background-color: blue;>${Object.keys(
         carDataObject
       ).map((carDataObjectKey) => {
