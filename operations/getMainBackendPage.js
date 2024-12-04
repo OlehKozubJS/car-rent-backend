@@ -14,7 +14,7 @@ const getMainBackendPage = async (request, response) => {
       <p
         style="background-color: rgb(150, 160, 120);"
       >
-        ${window.querySelector(".")}
+        ${window.querySelector(".carFilter").outerHTML()}
       </p>
       <p>
         ${filterData}
