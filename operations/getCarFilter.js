@@ -8,13 +8,13 @@ const getCarFilter = () => {
     </div>
     <div>
       <h3>Car rental price</h3>
-      <input placeholder="From" />
-      <input placeholder="To" />
+      <input placeholder="From" onChange="handleMinimalRentalPrice()" />
+      <input placeholder="To" onChange="handleMaximalRentalPrice()" />
     </div>
     <div>
       <h3>Car mileage</h3>
-      <input placeholder="From" />
-      <input placeholder="To" />
+      <input placeholder="From" onChange="handleMinimalMileage" />
+      <input placeholder="To" oncChange="handleMaximalMileage" />
     </div>
     <button type="submit">Find car</button>
   </form>`;
