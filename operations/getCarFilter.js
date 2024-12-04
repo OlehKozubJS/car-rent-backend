@@ -37,8 +37,45 @@ const getCarFilter = (onSubmit) => {
     onSubmit({ make, minRentalPrice, maxRentalPrice, minMileage, maxMileage });
   };
 
-  return `<form onSubmit="handleSubmit()">
-    <script></script>
+  return `<script>
+      let make = "";
+    let minRentalPrice = 0;
+    let maxRentalPrice = 0;
+    let minMileage = 0;
+    let maxMileage = 0;
+
+    const handler = (event) => {
+      return event.target.value;
+    };
+
+    const handleMake = (event) => {
+      make = handler(event);
+    };
+
+    const handleMinimalRentalPrice = (event) => {
+      minRentalPrice = handler(event);
+    };
+
+    const handleMaximalRentalPrice = (event) => {
+      maxRentalPrice = handler(event);
+    };
+
+    const handleMinimalMileage = (event) => {
+      minMileage = handler(event);
+    };
+
+    const handleMaximalMileage = (event) => {
+      maxMileage = handler(event);
+    };
+
+    const handleSubmit = (event) => {
+      event.preventDefault();
+
+      onSubmit({ make, minRentalPrice, maxRentalPrice, minMileage, maxMileage });
+    };
+  </script>
+  <form onSubmit="handleSubmit()">
+  <form>
     <div>
       <h3>Car brand (make)</h3>
       <label for="carMakeInput">
