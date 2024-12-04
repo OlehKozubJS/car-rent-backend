@@ -84,7 +84,7 @@ const getCarFilter = (onSubmit) => {
           id="maxCarMileageInput"
           type="number"
           placeholder="To"
-          oncChange="handleMaximalMileage()"
+          onChange="handleMaximalMileage()"
         />
       </label>
     </div>
