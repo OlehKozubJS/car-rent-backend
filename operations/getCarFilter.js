@@ -11,17 +11,17 @@ const getCarFilter = (onSubmit) => {
     return event.target.value;
   };
 
-  const handleMake = () => {};
+  const handleMake = (event) => {};
 
-  const handleMinimalRentalPrice = () => {};
+  const handleMinimalRentalPrice = (event) => {};
 
-  const handleMaximalRentalPrice = () => {};
+  const handleMaximalRentalPrice = (event) => {};
 
-  const handleMinimalMileage = () => {};
+  const handleMinimalMileage = (event) => {};
 
-  const handleMaximalMileage = () => {};
+  const handleMaximalMileage = (event) => {};
 
-  const handleSubmit = () => {};
+  const handleSubmit = (event) => {};
 
   return `<form onSubmit="handleSubmit()">
     <div>
