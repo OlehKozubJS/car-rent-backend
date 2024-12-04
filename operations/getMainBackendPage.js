@@ -11,5 +11,3 @@ const getMainBackendPage = async (request, response) => {
 };
 
 module.exports = { getMainBackendPage };
-
-// make rentalPrice mileage
