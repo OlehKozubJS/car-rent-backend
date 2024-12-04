@@ -1,5 +1,5 @@
 const getCarFilter = () => {
-  return `There will be car filter`;
+  return `<>There will be car filter<>`;
 };
 
 module.exports = { getCarFilter };
