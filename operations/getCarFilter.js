@@ -2,8 +2,8 @@ const getCarFilter = () => {
   return `<form >
     <div>
       <h3>Car brand (make)</h3>
-      <label>
-        <input placeholder="Enter car make name or its part" onChange="" />
+      <label for="carMakeInput">
+        <input id="carMakeInput" placeholder="Enter car make name or its part" onChange="" />
       <label />
     </div>
     <div>
