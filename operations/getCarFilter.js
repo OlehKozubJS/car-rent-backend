@@ -11,17 +11,29 @@ const getCarFilter = (onSubmit) => {
     return event.target.value;
   };
 
-  const handleMake = (event) => {};
+  const handleMake = (event) => {
+    make = handler(event);
+  };
 
-  const handleMinimalRentalPrice = (event) => {};
+  const handleMinimalRentalPrice = (event) => {
+    minRentalPrice = handler(event);
+  };
 
-  const handleMaximalRentalPrice = (event) => {};
+  const handleMaximalRentalPrice = (event) => {
+    maxRentalPrice = handler(event);
+  };
 
-  const handleMinimalMileage = (event) => {};
+  const handleMinimalMileage = (event) => {
+    minMileage = handler(event);
+  };
 
-  const handleMaximalMileage = (event) => {};
+  const handleMaximalMileage = (event) => {
+    maxMileage = handler(event);
+  };
 
-  const handleSubmit = (event) => {};
+  const handleSubmit = () => {
+    onSubmit({ make, minRentalPrice, maxRentalPrice, minMileage, maxMileage });
+  };
 
   return `<form onSubmit="handleSubmit()">
     <div>
