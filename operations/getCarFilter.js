@@ -3,7 +3,7 @@ const getCarFilter = () => {
     <div>
       <h3>Car brand (make)</h3>
       <label for="carMakeInput">
-        <input id="carMakeInput" placeholder="Enter car make name or its part" onChange="" />
+        <input style="width: 200px;" id="carMakeInput" placeholder="Enter car make name or its part" onChange="" />
       <label />
     </div>
     <div>
