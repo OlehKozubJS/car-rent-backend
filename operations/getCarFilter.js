@@ -1,4 +1,10 @@
-const getCarFilter = () => {
+const getCarFilter = (onSubmit) => {
+  // make rentalPrice mileage
+
+  let make = "";
+  let rentalPrice = 0;
+  let mileage = 0;
+
   const handleMake = () => {};
 
   const handleMinimalRentalPrice = () => {};
@@ -9,17 +15,31 @@ const getCarFilter = () => {
 
   const handleMaximalMileage = () => {};
 
-  return `<form >
+  return `<form onSubmit="handleSubmit()">
     <div>
       <h3>Car brand (make)</h3>
       <label for="carMakeInput">
-        <input style="width: 200px;" id="carMakeInput" placeholder="Enter car make name or its part" onChange="handleMake()" />
+        <input
+          id="carMakeInput"
+          type="text"
+          placeholder="Enter car make name or its part"
+          onChange="handleMake()"
+          style="width: 200px;"
+        />
       <label />
     </div>
     <div>
       <h3>Car rental price</h3>
-      <input placeholder="From" onChange="handleMinimalRentalPrice()" />
-      <input placeholder="To" onChange="handleMaximalRentalPrice()" />
+      <input
+        type="number"
+        placeholder="From"
+        onChange="handleMinimalRentalPrice()"
+      />
+      <input
+        type="number"  
+        placeholder="To"
+        onChange="handleMaximalRentalPrice()"
+      />
     </div>
     <div>
       <h3>Car mileage</h3>
