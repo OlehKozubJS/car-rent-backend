@@ -6,7 +6,10 @@ const getCarFilter = () => {
         <input placeholder="Enter car make name or its part" />
       <label />
     </div>
-    <div></div>
+    <div>
+      <h3>Car rental price</h3>
+      <input placeholder="">
+    </div>
     <div></div>
     <button type="submit">Find car</button>
   </form>`;
