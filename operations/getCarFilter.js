@@ -8,7 +8,8 @@ const getCarFilter = () => {
     </div>
     <div>
       <h3>Car rental price</h3>
-      <input placeholder="">
+      <input placeholder="From">
+      <input placeholder="To">
     </div>
     <div></div>
     <button type="submit">Find car</button>
