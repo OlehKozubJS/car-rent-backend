@@ -1,6 +1,10 @@
 const { getCarFilter } = require("./getCarFilter");
 
 const getMainBackendPage = async (request, response) => {
+  let 
+
+  const getFilterData = () => {};
+
   await response.send(
     `<main>
       <p>Welcome! This is the backend page of the Car Rent project</p>
