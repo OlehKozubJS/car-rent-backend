@@ -6,7 +6,7 @@ const getMainBackendPage = async (request, response) => {
   const getFilterData = (newFilterData) => {
     filterData = JSON.stringify(newFilterData);
   };
-
+  //getCarFilter(getFilterData)
   await response.send(
     `<main>
       <p>Welcome! This is the backend page of the Car Rent project</p>
@@ -14,7 +14,7 @@ const getMainBackendPage = async (request, response) => {
       <p
         style="background-color: rgb(150, 160, 120);"
       >
-        ${getCarFilter(getFilterData)}
+        ${window.querySelector(".")}
       </p>
       <p>
         ${filterData}
