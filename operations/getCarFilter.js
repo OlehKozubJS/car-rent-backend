@@ -43,8 +43,16 @@ const getCarFilter = (onSubmit) => {
     </div>
     <div>
       <h3>Car mileage</h3>
-      <input placeholder="From" onChange="handleMinimalMileage()" />
-      <input placeholder="To" oncChange="handleMaximalMileage()" />
+      <input
+        type="number"
+        placeholder="From"
+        onChange="handleMinimalMileage()"
+      />
+      <input
+        type="number"
+        placeholder="To"
+        oncChange="handleMaximalMileage()"
+      />
     </div>
     <button type="submit">Find car</button>
   </form>`;
