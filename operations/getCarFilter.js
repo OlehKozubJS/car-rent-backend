@@ -7,6 +7,8 @@ const getCarFilter = (onSubmit) => {
   let minMileage = 0;
   let maxMileage = 0;
 
+  const handler = () => {};
+
   const handleMake = () => {};
 
   const handleMinimalRentalPrice = () => {};
@@ -34,16 +36,22 @@ const getCarFilter = (onSubmit) => {
     </div>
     <div>
       <h3>Car rental price</h3>
-      <input
-        type="number"
-        placeholder="From"
-        onChange="handleMinimalRentalPrice()"
-      />
-      <input
-        type="number"  
-        placeholder="To"
-        onChange="handleMaximalRentalPrice()"
-      />
+      <label for="minCarRentalPriceInput">
+        <input
+          id="minCarRentalPriceInput"
+          type="number"
+          placeholder="From"
+          onChange="handleMinimalRentalPrice()"
+        />
+      </ label>
+      <label for="maxCarRentalPriceInput">
+        <input
+          id="maxCarRentalPriceInput"
+          type="number"  
+          placeholder="To"
+          onChange="handleMaximalRentalPrice()"
+        />
+      </ label>
     </div>
     <div>
       <h3>Car mileage</h3>
