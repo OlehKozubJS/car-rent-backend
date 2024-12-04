@@ -6,7 +6,7 @@ const getMainBackendPage = async (request, response) => {
   const getFilterData = (newFilterData) => {
     filterData = JSON.stringify(newFilterData);
   };
-
+  // make rentalPrice mileage
   await response.send(
     `<main>
       <p>Welcome! This is the backend page of the Car Rent project</p>
