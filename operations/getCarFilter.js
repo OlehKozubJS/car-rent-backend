@@ -1,9 +1,14 @@
 const getCarFilter = () => {
-  return `<form>
+  return `<form >
+    <div>
+      <h3>Car brand (make)</h3>
+      <label>
+        <input placeholder="Enter car make name or its part" />
+      <label />
+    </div>
     <div></div>
     <div></div>
-    <div></div>
-    <button >Find car</button>
+    <button type="submit">Find car</button>
   </form>`;
 };
 
