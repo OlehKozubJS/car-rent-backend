@@ -38,7 +38,6 @@ const getCarFilter = (onSubmit) => {
   };
 
   return `<form onSubmit="handleSubmit()">
-  <form>
     <div>
       <h3>Car brand (make)</h3>
       <label for="carMakeInput">
