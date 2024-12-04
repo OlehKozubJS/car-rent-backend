@@ -3,3 +3,5 @@ const getCarFilter = () => {
 };
 
 module.exports = { getCarFilter };
+
+// make rentalPrice mileage
