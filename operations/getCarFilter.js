@@ -2,8 +2,10 @@ const getCarFilter = (onSubmit) => {
   // make rentalPrice mileage
 
   let make = "";
-  let rentalPrice = 0;
-  let mileage = 0;
+  let minRentalPrice = 0;
+  let maxRentalPrice = 0;
+  let minMileage = 0;
+  let maxMileage = 0;
 
   const handleMake = () => {};
 
@@ -14,6 +16,8 @@ const getCarFilter = (onSubmit) => {
   const handleMinimalMileage = () => {};
 
   const handleMaximalMileage = () => {};
+
+  const handleSubmit = () => {};
 
   return `<form onSubmit="handleSubmit()">
     <div>
