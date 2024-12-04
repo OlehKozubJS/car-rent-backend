@@ -33,6 +33,7 @@ const getCarFilter = (onSubmit) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     onSubmit({ make, minRentalPrice, maxRentalPrice, minMileage, maxMileage });
   };
 
