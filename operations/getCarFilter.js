@@ -1,4 +1,14 @@
 const getCarFilter = () => {
+  const handleMake = () => {};
+
+  const handleMinimalRentalPrice = () => {};
+
+  const handleMaximalRentalPrice = () => {};
+
+  const handleMinimalMileage = () => {};
+
+  const handleMaximalMileage = () => {};
+
   return `<form >
     <div>
       <h3>Car brand (make)</h3>
