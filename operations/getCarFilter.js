@@ -7,7 +7,9 @@ const getCarFilter = (onSubmit) => {
   let minMileage = 0;
   let maxMileage = 0;
 
-  const handler = () => {};
+  const handler = (event) => {
+    return event.target.value;
+  };
 
   const handleMake = () => {};
 
